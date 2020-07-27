@@ -1,11 +1,11 @@
 package main
 
 import (
+	"beanstalkd-cli/command"
 	"fmt"
 	"os"
 	"time"
 
-	"github.com/edwinhoksberg/beanstalkd-cli/command"
 	"github.com/urfave/cli"
 )
 
@@ -18,6 +18,7 @@ func main() {
 	command := new(command.Command)
 
 	app := cli.NewApp()
+
 
 	app.Name = Name
 	app.Usage = ""
