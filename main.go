@@ -19,7 +19,6 @@ func main() {
 
 	app := cli.NewApp()
 
-
 	app.Name = Name
 	app.Usage = ""
 	app.HelpName = Name
@@ -115,6 +114,18 @@ func main() {
 					Name:  "tube",
 					Usage: "The name of the tube to peek from",
 					Value: "default",
+				},
+			},
+		},
+		{
+			Name:   "list",
+			Usage:  "List all tubes or those fulfilling filter",
+			Action: command.List,
+			Flags: []cli.Flag{
+				&cli.StringFlag{
+					Name:  "filter",
+					Usage: "Tube name to filter",
+					Value: "",
 				},
 			},
 		},
