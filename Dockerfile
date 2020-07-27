@@ -8,6 +8,5 @@ RUN go build -o ./beanstalkd-cli .
 
 FROM alpine:latest
 ENTRYPOINT ["./beanstalkd-cli"]
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 
 COPY --from=builder /go/src/app/beanstalkd-cli .
